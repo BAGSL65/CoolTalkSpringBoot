@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--引用外部css样式-->
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <!-- jquery -->
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <title>目录</title>
+</head>
+<body>
+<div class="content">
+    <span>好好学习，天天向上！</span>
+    <a th:href="@{home}">进入首页</a>
+    <input id="text" type="text" value="请输入">
+    <button>点击</button>
+</div>
+</body>
+<script>
+    $("button").bind("click",function(){
+    var value=$("span").text();
+        alert(value);
+    });
+</script>
+</html>

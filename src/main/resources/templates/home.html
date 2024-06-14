@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--引用外部css样式-->
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <!-- jquery -->
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}" />
+    <script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+    <!-- layer -->
+    <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+    <title>主页</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">欢迎来到这里！</div>
+        <div class="col-md-4" th:text="${name}">name是小Y(only test)</div>
+    </div>
+    <button id="demo" onclick="myFunction('我是')">点击我</button>
+    <button id="tishi" onclick="tishi()">提示</button>
+    <h2>普通字符串</h2>
+    <table>
+        <tr>
+            <td th:text="'我的名字是：'+${name}"></td>
+        </tr>
+    </table>
+
+    <h2>JavaBean对象</h2>
+    <table class="mytable" th:object="${user}">
+        <tr>
+            <td>介绍</td>
+            <td th:text="*{name}"></td>
+        </tr>
+        <tr>
+            <td>年龄</td>
+            <td th:text="*{age}"></td>
+        </tr>
+        <tr>
+            <td>介绍</td>
+            <td th:text="*{detail}"></td>
+        </tr>
+    </table>
+
+    <h2>List取值</h2>
+    <table bgcolor="#ffe4c4" border="1">
+        <tr th:each="item:${userlist}">
+            <td th:text="${item}"></td>
+        </tr>
+    </table>
+
+    <h2>Map取值</h2>
+    <table bgcolor="#8fbc8f" border="1">
+        <tr>
+            <td>place:</td>
+            <td th:text="${map.get('place')}"></td>
+        </tr>
+        <tr>
+            <td>feeling:</td>
+            <td th:text="${map.feeling}"></td>
+        </tr>
+    </table>
+
+    <h2>Map遍历</h2>
+    <table bgcolor="#ffe4c4" border="1">
+        <tr th:each="item:${map}">
+            <td th:text="${item.key}"></td>
+            <td th:text="${item.value}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+<script>
+    function myFunction(a){
+        x=5;y=6;
+        z=x+y;
+        x++;
+        y++;
+        document.getElementById("demo").innerHTML= x ;
+    }
+    function tishi(){
+        layer.msg('处理中...', {icon: 1,shade: [0.5, '#f5f5f5'],scrollbar: false,offset: '0px', time:3000}) ;
+        //eg
+<!--        layer.msg('同上', {-->
+<!--          icon: 1,-->
+<!--          time: 2000 //2秒关闭（如果不配置，默认是3秒）-->
+<!--        }, function(){-->
+<!--          //do something-->
+<!--        });-->
+    }
+</script>
+</html>
