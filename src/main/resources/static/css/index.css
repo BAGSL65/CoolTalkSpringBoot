@@ -1,0 +1,24 @@
+.content{
+    color: red;
+    font-family: 黑体;
+    font-size: 25px;
+}
+.content table{
+     border: 1px solid black;
+      outline: 0.5rem solid khaki;
+      box-shadow: 0 0 0 2rem skyblue;
+      border-radius: 12px;
+      font: bold 1rem sans-serif;
+      margin: 2rem;
+      padding: 1rem;
+      outline-offset: 0.5rem;
+}
+
+.content tr{
+    border: 1px solid black;
+      outline: 1px solid khaki;
+}
+
+.content td{
+    border: 1px solid black;
+}
