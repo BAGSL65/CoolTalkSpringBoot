@@ -1,14 +1,15 @@
-USE `test`;
--- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
+CREATE DATABASE  IF NOT EXISTS `cooltalkdb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `cooltalkdb`;
+-- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: localhost    Database: cooltalk_sql
+-- Host: localhost    Database: cooltalkdb
 -- ------------------------------------------------------
--- Server version	5.5.62
+-- Server version	8.0.38
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -22,13 +23,13 @@ USE `test`;
 
 DROP TABLE IF EXISTS `cooltalk_user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cooltalk_user` (
   `account` varchar(255) NOT NULL COMMENT '账户名',
   `password` varchar(255) NOT NULL COMMENT '密码',
   `gender` enum('male','female','unknown') NOT NULL DEFAULT 'unknown' COMMENT '性别',
   PRIMARY KEY (`account`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +38,7 @@ CREATE TABLE `cooltalk_user` (
 
 LOCK TABLES `cooltalk_user` WRITE;
 /*!40000 ALTER TABLE `cooltalk_user` DISABLE KEYS */;
-INSERT INTO `cooltalk_user` VALUES ('123','123','unknown');
+INSERT INTO `cooltalk_user` VALUES ('123','123','unknown'),('555','555','male'),('666','666','female');
 /*!40000 ALTER TABLE `cooltalk_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-23 16:43:40
+-- Dump completed on 2024-08-23 18:57:09

@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/cooltalk_sql?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/cooltalkdb?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     username: root
     password: 656565
     driver-class-name: com.mysql.cj.jdbc.Driver

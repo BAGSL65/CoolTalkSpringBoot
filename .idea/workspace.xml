@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53d4d22f-3f5b-4989-a37a-33162b2491eb" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk_v1/common/result/CommonResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk_v1/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk_v1/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CoolTalkApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/IndexController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/po/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mysql/cooltalk.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mysql/cooltalk.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +30,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -49,8 +58,9 @@
     "project.structure.last.edited": "SDK",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "应用程序.CoolTalkApplication.executor": "Run",
+    "应用程序.CoolTalkV1Application.executor": "Run",
     "应用程序.Main.executor": "Run"
   }
 }]]></component>
@@ -67,12 +77,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="CoolTalkApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.CoolTalkApplication" />
+    <configuration name="CoolTalkV1Application" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yxf.CoolTalk_v1.CoolTalkV1Application" />
       <module name="CoolTalk-v1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="com.yxf.CoolTalk_v1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,11 +90,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="应用程序.CoolTalkApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
