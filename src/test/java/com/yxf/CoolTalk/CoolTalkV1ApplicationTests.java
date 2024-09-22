@@ -1,4 +1,4 @@
-package com.yxf.CoolTalk_v1;
+package com.yxf.CoolTalk;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

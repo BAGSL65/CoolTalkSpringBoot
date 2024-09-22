@@ -1,12 +1,23 @@
+# 数据源,Spring配置
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/cooltalkdb?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     username: root
     password: 656565
     driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+# 服务器配置
 server:
-  port: 8081  # ??
+  port: 8081  # 端口号
   servlet:
-    context-path: /  # ???????????????????
+    context-path: /  # 上下文路径
     session:
-      timeout: 3600  # ?????session?????????
+      timeout: 15m  # session超时时间
+
+# MyBatis mapper.xml路径配置
+mybatis:
+  mapper-locations:
+    - classpath:dao/*.xml
+    - classpath*:com/**/mapper/*.xml

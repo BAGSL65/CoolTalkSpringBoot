@@ -1,4 +1,4 @@
-package com.yxf.CoolTalk_v1;
+package com.yxf.CoolTalk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
