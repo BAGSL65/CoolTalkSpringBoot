@@ -2,8 +2,14 @@ package com.yxf.CoolTalk.mbg.mapper;
 
 import com.yxf.CoolTalk.mbg.model.CooltalkUser;
 import com.yxf.CoolTalk.mbg.model.CooltalkUserExample;
+
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
+
+import lombok.SneakyThrows;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.dao.DataIntegrityViolationException;
 
 public interface CooltalkUserMapper {
     long countByExample(CooltalkUserExample example);

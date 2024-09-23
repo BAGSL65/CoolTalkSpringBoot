@@ -9,12 +9,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+
 @CrossOrigin(origins = "http://localhost:5173/")
 @RestController
 public class UserController {
     @Autowired
     private UserService userService;
-    @PostMapping("/loginByAccountByPassword")
+
+
+    @PostMapping("/login")
     public CommonResult<CooltalkUser> loginByAccountByPassword(@RequestBody CooltalkUser user){
         String act=user.getAccount();
         String pwd=user.getPassword();
@@ -22,5 +27,16 @@ public class UserController {
         return user_db!=null?
                 CommonResult.success(user_db):
                 CommonResult.fail();
+    }
+
+    @PostMapping("/user")
+    public CommonResult<Void> createUser(@RequestBody CooltalkUser user){
+        int res=userService.createUser(user);
+        return switch (res) {
+            case (-1) -> CommonResult.fail("用户名已存在");
+            case (0) -> CommonResult.fail("用户创建失败");
+            case (1) -> CommonResult.success(null);
+            default -> CommonResult.fail("发生未知错误");
+        };
     }
 }

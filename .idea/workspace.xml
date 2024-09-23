@@ -5,28 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53d4d22f-3f5b-4989-a37a-33162b2491eb" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/common/result/CommonResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/common/result/EnumResultCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/common/result/IResultCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/config/MyBatisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/config/Swagger2Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/mbg/CommentGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/mbg/Generator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/generator.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk_v1/CoolTalkV1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/CoolTalkV1Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk_v1/common/result/CommonResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk_v1/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk_v1/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/dao/CooltalkUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk_v1/pojo/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk_v1/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/mbg/mapper/CooltalkUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/mbg/mapper/CooltalkUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/yxf/CoolTalk_v1/CoolTalkV1ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yxf/CoolTalk/CoolTalkV1ApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,42 +35,43 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="F:\Maven\apache-maven-3.9.8" />
+        <option name="customMavenHome" value="F:\Maven\apache-maven-3.9.6" />
         <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
       </MavenGeneralSettings>
     </option>
-  </component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="无" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2g85zBYEQDnz5fZdvWhw18TJI62" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CoolTalkV1Application.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/MyJava_Projects/CoolTalkSpringBoot/src/main/java/com/yxf/CoolTalk_v1&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
-    &quot;应用程序.CoolTalkApplication.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.CoolTalkV1Application.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Generator.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CoolTalkV1Application.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Maven.CoolTalk [compile].executor": "Run",
+    "Maven.CoolTalk [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/MyJava_Projects/CoolTalkSpringBoot/src/main/java/com/yxf/CoolTalk_v1",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors",
+    "应用程序.CoolTalkApplication.executor": "Run",
+    "应用程序.CoolTalkV1Application.executor": "Run",
+    "应用程序.Generator.executor": "Run",
+    "应用程序.Main.executor": "Run"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\MyJava_Projects\CoolTalkSpringBoot\src\main\java\com\yxf\CoolTalk_v1" />
