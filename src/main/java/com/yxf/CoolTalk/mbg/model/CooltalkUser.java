@@ -1,8 +1,10 @@
 package com.yxf.CoolTalk.mbg.model;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
+@ApiModel(value = "CooltalkUser",description = "酷淘用户")
 public class CooltalkUser implements Serializable {
     @ApiModelProperty(value = "主键")
     private Integer id;

@@ -28,12 +28,14 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.macro.mall.tiny.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.yxf.CoolTalk.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 //添加登录认证
-                .securitySchemes(securitySchemes())
-                .securityContexts(securityContexts());
+//                .securitySchemes(securitySchemes())
+//                .securityContexts(securityContexts())
+                ;
+
     }
 
     private ApiInfo apiInfo() {
