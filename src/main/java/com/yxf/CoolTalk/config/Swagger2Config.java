@@ -15,6 +15,7 @@ import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.spring.web.plugins.WebFluxRequestHandlerProvider;
 import springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -79,7 +80,7 @@ public class Swagger2Config {
     }
 
     @Bean
-    public BeanPostProcessor generateBeanPostProcessor(){
+    public static BeanPostProcessor springfoxHandlerProviderBeanPostProcessor() {
         return new BeanPostProcessor() {
 
             @Override

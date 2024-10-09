@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53d4d22f-3f5b-4989-a37a-33162b2491eb" name="更改" comment="增加swaggerUI和改写相关依赖">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/config/RedisConfig.java" afterDir="false" />
+    <list default="true" id="53d4d22f-3f5b-4989-a37a-33162b2491eb" name="更改" comment="增加创建用户功能，使用Hutool进行密码加密">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/CoolTalkV1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/CoolTalkV1Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/config/Swagger2Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -48,13 +44,13 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="F:\Maven\apache-maven-3.9.8" />
+        <option name="customMavenHome" value="F:\Maven\apache-maven-3.9.6" />
         <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="无" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -67,27 +63,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CoolTalkV1Application.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Maven.CoolTalk [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CoolTalk [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/MyJava_Projects/CoolTalkSpringBoot/src/main/java/com/yxf/CoolTalk_v1&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;应用程序.CoolTalkApplication.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.CoolTalkV1Application.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Generator.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CoolTalkV1Application.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Maven.CoolTalk [clean].executor": "Run",
+    "Maven.CoolTalk [compile].executor": "Run",
+    "Maven.CoolTalk [install].executor": "Run",
+    "Maven.CoolTalk [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/MyJava_Projects/CoolTalkSpringBoot/src/main/java/com/yxf/CoolTalk_v1",
+    "project.structure.last.edited": "库",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "应用程序.CoolTalkApplication.executor": "Run",
+    "应用程序.CoolTalkV1Application.executor": "Run",
+    "应用程序.Generator.executor": "Run",
+    "应用程序.Main.executor": "Run"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\MyJava_Projects\CoolTalkSpringBoot\src\main\java\com\yxf\CoolTalk_v1" />
@@ -151,6 +149,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加swaggerUI和改写相关依赖" />
