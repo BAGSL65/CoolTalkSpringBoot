@@ -4,8 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53d4d22f-3f5b-4989-a37a-33162b2491eb" name="更改" comment="增加swaggerUI和改写相关依赖">
+    <list default="true" id="53d4d22f-3f5b-4989-a37a-33162b2491eb" name="更改" comment="增加创建用户功能，使用Hutool进行密码加密">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/common/utils/JwtTokenUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/component/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/component/RestAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/component/RestfulAccessDeniedHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/config/CoolTalkSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/config/IgnoreUrlsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/RedisController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/UmsAdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/po/AdminUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/po/UmsResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/RedisService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/impl/RedisServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/common/result/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/common/result/CommonResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/config/Swagger2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +36,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -41,7 +61,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="F:\Maven\apache-maven-3.9.8" />
+        <option name="customMavenHome" value="F:\Maven\apache-maven-3.9.6" />
         <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
       </MavenGeneralSettings>
     </option>
@@ -57,41 +77,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CoolTalkV1Application.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Maven.CoolTalk [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CoolTalk [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/MyJava_Projects/CoolTalkSpringBoot/src/main/java/com/yxf/CoolTalk_v1&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;应用程序.CoolTalkApplication.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.CoolTalkV1Application.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Generator.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CoolTalkV1Application.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Maven.CoolTalk [compile].executor": "Run",
+    "Maven.CoolTalk [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/JavaProjects/CoolTalkSpringBoot/src/main/java/com/yxf/CoolTalk/service",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "应用程序.CoolTalkApplication.executor": "Run",
+    "应用程序.CoolTalkV1Application.executor": "Run",
+    "应用程序.Generator.executor": "Run",
+    "应用程序.Main.executor": "Run"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\JavaProjects\CoolTalkSpringBoot\src\main\java\com\yxf\CoolTalk\service" />
+      <recent name="F:\JavaProjects\CoolTalkSpringBoot\src\main\java\com\yxf\CoolTalk" />
       <recent name="E:\MyJava_Projects\CoolTalkSpringBoot\src\main\java\com\yxf\CoolTalk_v1" />
       <recent name="E:\MyJava_Projects\CoolTalkSpringBoot\src\main\resources\templates" />
       <recent name="D:\Java Workspace\MyApp\CoolTalk-v1\src\main\resources\static" />
-      <recent name="D:\Java Workspace\MyApp\CoolTalk-v1\src\main\resources\static\bootstrap\js" />
-      <recent name="D:\Java Workspace\MyApp\CoolTalk-v1\src\main\resources\static\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\MyJava_Projects\CoolTalkSpringBoot\src\main\resources" />
       <recent name="D:\Java Workspace\MyApp\CoolTalk-v1\src\main\resources\static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yxf.CoolTalk.controller" />
+      <recent name="com.yxf.CoolTalk.po" />
+      <recent name="com.yxf.CoolTalk.service.impl" />
       <recent name="com.yxf.CoolTalk.config" />
+      <recent name="com.yxf.CoolTalk.common.utils" />
     </key>
   </component>
   <component name="RunManager" selected="应用程序.CoolTalkV1Application">
@@ -139,11 +163,49 @@
       <option name="project" value="LOCAL" />
       <updated>1727582905231</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="增加创建用户功能，使用Hutool进行密码加密">
+      <option name="closed" value="true" />
+      <created>1728470243065</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728470243065</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Revert &quot;修正版本错误&quot;&#10;&#10;This reverts commit 0483b886">
+      <option name="closed" value="true" />
+      <created>1728470265280</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728470265280</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Revert &quot;引入postman工具和redis数据库缓存&quot;&#10;&#10;This reverts commit 73b58a79">
+      <option name="closed" value="true" />
+      <created>1728470302763</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728470302763</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加swaggerUI和改写相关依赖" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加swaggerUI和改写相关依赖" />
+    <MESSAGE value="增加创建用户功能，使用Hutool进行密码加密" />
+    <MESSAGE value="Revert &quot;修正版本错误&quot;&#10;&#10;This reverts commit 0483b886" />
+    <MESSAGE value="Revert &quot;引入postman工具和redis数据库缓存&quot;&#10;&#10;This reverts commit 73b58a79" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;引入postman工具和redis数据库缓存&quot;&#10;&#10;This reverts commit 73b58a79" />
   </component>
 </project>

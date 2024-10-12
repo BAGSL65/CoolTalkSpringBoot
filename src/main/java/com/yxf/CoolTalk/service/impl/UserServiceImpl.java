@@ -6,11 +6,14 @@ import com.yxf.CoolTalk.dao.CooltalkUserDao;
 import com.yxf.CoolTalk.mbg.mapper.CooltalkUserMapper;
 import com.yxf.CoolTalk.mbg.model.CooltalkUser;
 import com.yxf.CoolTalk.mbg.model.CooltalkUserExample;
+import com.yxf.CoolTalk.po.AdminUserDetails;
+import com.yxf.CoolTalk.service.RedisService;
 import com.yxf.CoolTalk.service.UserService;
 import lombok.SneakyThrows;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
@@ -21,6 +24,7 @@ import cn.hutool.core.util.StrUtil;
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
+import java.util.Random;
 
 /**
  * @program: CoolTalkSpringBoot
@@ -35,6 +39,13 @@ public class UserServiceImpl implements UserService {
     private CooltalkUserDao cooltalkUserDao;
     @Autowired
     private CooltalkUserMapper cooltalkUserMapper;
+    @Autowired
+    private RedisService redisService;
+
+    @Value("${redis.key.prefix.authCode}")
+    private String REDIS_KEY_PREFIX_AUTH_CODE;
+    @Value("${redis.key.expire.authCode}")
+    private Long AUTH_CODE_EXPIRE_SECONDS;
     @Override
     public CooltalkUser loginByAccountByPassword(String act,String pwd) {
         CooltalkUserExample userExample=new CooltalkUserExample();
@@ -118,4 +129,31 @@ public class UserServiceImpl implements UserService {
         List<CooltalkUser> res=cooltalkUserMapper.selectByExample(userExample);
         return !res.isEmpty()? res.get(0): null;
     }
+
+
+
+    @Override
+    public String generateAuthCode(String act) {
+        StringBuilder sb = new StringBuilder();
+        Random random = new Random();
+        for (int i = 0; i < 6; i++) {
+            sb.append(random.nextInt(10));
+        }
+        //验证码绑定账号并存储到redis
+        redisService.set(REDIS_KEY_PREFIX_AUTH_CODE + act, sb.toString());
+        redisService.expire(REDIS_KEY_PREFIX_AUTH_CODE + act, AUTH_CODE_EXPIRE_SECONDS);
+        return sb.toString();
+    }
+
+
+    //对输入的验证码进行校验
+    @Override
+    public Boolean verifyAuthCode(String act, String authCode) {
+        if (StrUtil.isEmpty(authCode)) {
+            return false;
+        }
+        String realAuthCode = (String) redisService.get(REDIS_KEY_PREFIX_AUTH_CODE + act);
+        return authCode.equals(realAuthCode);
+    }
+
 }

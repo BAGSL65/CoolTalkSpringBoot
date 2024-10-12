@@ -32,17 +32,17 @@ public class Swagger2Config {
                 .paths(PathSelectors.any())
                 .build()
                 //添加登录认证
-//                .securitySchemes(securitySchemes())
-//                .securityContexts(securityContexts())
+                .securitySchemes(securitySchemes())
+                .securityContexts(securityContexts())
                 ;
 
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("SwaggerUI演示")
-                .description("mall-tiny")
-                .contact(new Contact("macro", null, null))
+                .title("酷淘软件")
+                .description("CoolTalk")
+                .contact(new Contact("CoolTalk", null, null))
                 .version("1.0")
                 .build();
     }
@@ -58,7 +58,7 @@ public class Swagger2Config {
     private List<SecurityContext> securityContexts() {
         //设置需要登录认证的路径
         List<SecurityContext> result = new ArrayList<>();
-        result.add(getContextByPath("/brand/.*"));
+        result.add(getContextByPath("/Redis/.*"));
         return result;
     }
 

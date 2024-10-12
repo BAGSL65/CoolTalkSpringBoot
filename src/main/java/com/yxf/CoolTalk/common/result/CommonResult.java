@@ -50,4 +50,17 @@ public class CommonResult<T> {
     public static<T> CommonResult<T> fail(IResultCode res){
         return new CommonResult<T>(res.getCode(), res.getMessage(),null);
     }
+
+
+    public static<T> CommonResult<T> unauthorized(String msg) {
+        return new CommonResult<T>(EnumResultCode.UNAUTHORIZED.getCode(),msg,null);
+    }
+
+    public static<T> CommonResult<T> forbidden(String msg) {
+        return new CommonResult<T>(EnumResultCode.FORBIDDEN.getCode(),msg,null);
+    }
+
+    public static<T> CommonResult<T> validateFailed(String msg) {
+        return new CommonResult<T>(EnumResultCode.VALIDATE_FAILED.getCode(),msg,null);
+    }
 }
