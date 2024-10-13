@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yxf.CoolTalk.dao.EsCoolTalkScrollContentDao">
+    <resultMap id="esContentListMap" type="com.yxf.CoolTalk.nosql.elasticsearch.document.EsCoolTalkScrollContent" autoMapping="true">
+        <id column="id" jdbcType="VARCHAR" property="id" />
+        <result column="content_text" property="text"/>
+        <result column="content_imageurl" property="imageurl"/>
+    </resultMap>
+    <select id="getAllEsContentList" resultMap="esContentListMap">
+        select
+            *
+        from cooltalk_scrollwindow_content
+        where 1=1
+        <if test="id!=null">
+            and id=#{id}
+        </if>
+    </select>
+</mapper>
