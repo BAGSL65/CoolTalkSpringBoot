@@ -20,7 +20,7 @@ import java.util.List;
 @Api(tags="UserController")
 @CrossOrigin(origins = "http://localhost:5173/")
 @RestController
-@RequestMapping("/User")
+@RequestMapping("/user")
 @Tag(name="UserController",description = "用户管理")
 public class UserController {
     @Autowired

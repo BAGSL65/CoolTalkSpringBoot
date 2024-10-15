@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53d4d22f-3f5b-4989-a37a-33162b2491eb" name="更改" comment="引入SpringSecurity和JWT进行管理员身份验证">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/common/result/CommonPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/EsScrollContentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/dao/EsCoolTalkScrollContentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/nosql/elasticsearch/document/EsCoolTalkScroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/nosql/elasticsearch/document/EsCoolTalkScrollContent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/nosql/elasticsearch/repository/EsCoolTalkScrollContentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/EsScrollService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/impl/EsScrollServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/dao/EsCoolTalkScrollContentDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql/cooltalk_v2.sql" afterDir="false" />
+    <list default="true" id="53d4d22f-3f5b-4989-a37a-33162b2491eb" name="更改" comment="引入ElasticSearch实现搜索功能">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/CoolTalkPostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/nosql/mongoDB/document/CoolTalkPost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/nosql/mongoDB/document/CoolTalkReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/nosql/mongoDB/repository/CoolTalkPostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/CoolTalkPostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/service/impl/CoolTalkPostServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxf/CoolTalk/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +76,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/JavaProjects/CoolTalkSpringBoot/src/main/resources/com/yxf/CoolTalk/mbg/dao",
+    "last_opened_file_path": "F:/JavaProjects/CoolTalkSpringBoot/src/main/java/com/yxf/CoolTalk/nosql/mongoDB",
     "project.structure.last.edited": "项目",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -92,11 +89,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\JavaProjects\CoolTalkSpringBoot\src\main\java\com\yxf\CoolTalk\nosql\mongoDB" />
       <recent name="F:\JavaProjects\CoolTalkSpringBoot\src\main\resources\com\yxf\CoolTalk\mbg\dao" />
       <recent name="F:\JavaProjects\CoolTalkSpringBoot\src\main\java\com\yxf\CoolTalk\service" />
       <recent name="F:\JavaProjects\CoolTalkSpringBoot\src\main\java\com\yxf\CoolTalk\nosql" />
       <recent name="F:\JavaProjects\CoolTalkSpringBoot\src\main\java\com\yxf\CoolTalk" />
-      <recent name="E:\MyJava_Projects\CoolTalkSpringBoot\src\main\java\com\yxf\CoolTalk_v1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\JavaProjects\CoolTalkSpringBoot\src\main\resources\mysql" />
@@ -105,11 +102,11 @@
       <recent name="D:\Java Workspace\MyApp\CoolTalk-v1\src\main\resources\static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.yxf.CoolTalk.common.result" />
       <recent name="com.yxf.CoolTalk.controller" />
-      <recent name="com.yxf.CoolTalk.dao" />
-      <recent name="com.yxf.CoolTalk.po" />
       <recent name="com.yxf.CoolTalk.service.impl" />
+      <recent name="com.yxf.CoolTalk.service" />
+      <recent name="com.yxf.CoolTalk.common.result" />
+      <recent name="com.yxf.CoolTalk.dao" />
     </key>
   </component>
   <component name="RunManager" selected="应用程序.CoolTalkV1Application">
@@ -197,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728709707834</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="引入ElasticSearch实现搜索功能">
+      <option name="closed" value="true" />
+      <created>1728822241354</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728822241354</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,6 +222,7 @@
     <MESSAGE value="Revert &quot;修正版本错误&quot;&#10;&#10;This reverts commit 0483b886" />
     <MESSAGE value="Revert &quot;引入postman工具和redis数据库缓存&quot;&#10;&#10;This reverts commit 73b58a79" />
     <MESSAGE value="引入SpringSecurity和JWT进行管理员身份验证" />
-    <option name="LAST_COMMIT_MESSAGE" value="引入SpringSecurity和JWT进行管理员身份验证" />
+    <MESSAGE value="引入ElasticSearch实现搜索功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="引入ElasticSearch实现搜索功能" />
   </component>
 </project>
