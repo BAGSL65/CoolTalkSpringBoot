@@ -50,12 +50,4 @@ public class UmsAdminController {
         tokenMap.put("tokenHead", tokenHead);
         return CommonResult.success(tokenMap);
     }
-
-    @ApiOperation(value = "登录以后返回token")
-    @RequestMapping(value = "/resourceList", method = RequestMethod.POST)
-    @ResponseBody
-    public CommonResult<List<UmsResource>> resourceList() {
-        List<UmsResource> resourceList = adminService.getResourceList();
-        return CommonResult.success(resourceList);
-    }
 }

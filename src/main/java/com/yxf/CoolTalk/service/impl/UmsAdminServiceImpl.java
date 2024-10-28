@@ -45,14 +45,24 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     @PostConstruct
     private void init(){
         adminUserDetailsList.add(AdminUserDetails.builder()
-                .username("cooltalk")
-                .password(passwordEncoder.encode("123456"))
+                .username("redis")
+                .password(passwordEncoder.encode("redis"))
                 .authorityList(CollUtil.toList("Redis:visit"))
+                .build());
+        adminUserDetailsList.add(AdminUserDetails.builder()
+                .username("rabbit")
+                .password(passwordEncoder.encode("rabbit"))
+                .authorityList(CollUtil.toList("Rabbit:order"))
                 .build());
         resourceList.add(UmsResource.builder()
                 .id(1L)
                 .name("Redis:visit")
                 .url("/Redis/visit")
+                .build());
+        resourceList.add(UmsResource.builder()
+                .id(2L)
+                .name("Rabbit:order")
+                .url("/Rabbit/order")
                 .build());
     }
     @Override
